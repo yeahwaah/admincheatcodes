@@ -8,4 +8,4 @@ read cpuser
 echo $(grep IP /var/cpanel/users/$cpuser | cut -d = -f 2)
 
 # list domains under cpanel user
-echo = $(grep $(echo $cpuser) /etc/userdomains)
+echo $(grep $(echo $cpuser) /etc/userdomains | cut -d : -f 1)
