@@ -5,4 +5,4 @@ echo "Enter the cPanel user:"
 read cpuser
 
 # Test print
-echo "Hello $cpuser"
+echo $(grep IP /var/cpanel/users/$cpuser)
