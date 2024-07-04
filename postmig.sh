@@ -13,8 +13,11 @@ cpdom="$(echo $(grep $(echo $cpuser) /etc/userdomains | cut -d : -f 1))"
 
 for i in $cpdom
 do
-echo " ----------------------------------------------"
-echo "Testing $i if it works. HTTP 200 result is expected!"
-echo "Result --> " $(curl -I -s https://$i --resolve $i:80:$cpip | grep HTTP)
+echo " "
+echo " "
+echo "Testing $i if it works"
+echo "HTTP 200 result is expected!"
+echo "Result --> " $(curl -I -s $i --resolve $i:80:$cpip | grep -a 'HTTP')
 echo " ----------------------------------------------"
 done
+
