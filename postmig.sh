@@ -18,6 +18,7 @@ echo " "
 echo "Testing $i if it works"
 echo "HTTP 200 result is expected!"
 echo "Result --> " $(curl -I -s $i --resolve $i:80:$cpip | grep -a 'HTTP')
+echo " "
 echo " ----------------------------------------------"
 done
 
