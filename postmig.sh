@@ -21,3 +21,8 @@ echo "Result --> " $(curl -I -s $i --resolve $i:80:$cpip | grep -a 'HTTP')
 echo " ----------------------------------------------"
 done
 
+echo " ------  ADD THIS TO YOUR HOST FILES ------ "
+for i in $cpdom
+do
+echo $cpip " " $i
+done
