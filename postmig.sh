@@ -15,7 +15,7 @@ for i in $cpdom
 do
 echo " "
 echo " "
-echo "Testing $i if it works"
+echo "Testing $i if it works in $(hostname)"
 echo "HTTP 200 result is expected!"
 echo "Result --> " $(curl -I -s $i --resolve $i:80:$cpip | grep -a 'HTTP')
 echo " "
