@@ -24,6 +24,7 @@ done
 
 echo " "
 echo " ------  ADD THIS TO YOUR HOST FILES ------ "
+echo " "
 for i in $cpdom
 do
 echo $cpip " " $i
