@@ -26,3 +26,4 @@ for i in $cpdom
 do
 echo $cpip " " $i
 done
+
