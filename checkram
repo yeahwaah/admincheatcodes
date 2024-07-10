@@ -5,6 +5,7 @@ for USER in $(ps haux | awk '{print $1}' | sort -u)
 # for i in $USER
 do
 #    ps hux -U $i | awk -v user=$i -v total=$TOTAL '{ sum += $6 } END { printf "%s %.2f\\n", user, sum / total * 100; }'
+#    ps hux -U $i | awk -v user=$i -v total=$TOTAL '{ sum += $6 } END { printf "%s %.2f% Memory usage\n", user, sum / total * 100; }'
 
-     ps hux -U $i | awk -v user=$i -v total=$TOTAL '{ sum += $6 } END { printf "%s %.2f% Memory usage\n", user, sum / total * 100; }'
+     ps hux -U $USER | awk -v user=$USER -v total=$TOTAL '{ sum += $6 } END { printf "%s %.2f% Memory usage\n", user, sum / total * 100; }'
 done
